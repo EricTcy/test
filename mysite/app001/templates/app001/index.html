@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Kunshan Fun(+) Toastmasters Club</p>
+<p>昆山头马俱乐部</p>
+<p>在册会员通讯录</p>
+
+{% if app001_list %}
+   <ul>
+    {% for elem in app001_list %}
+      <li>
+        <h3>{{elem.title}}</h3>
+        <p>{{elem.content}}</p>
+      </li>
+    {% endfor %}
+    </ul>
+{% else %}
+   <p>暂无记录</p>
+
+{% endif %}
+
+</body>
+</html>
